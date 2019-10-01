@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<header class="sub-header vert-middle">
+  <h4>Board of Directors</h4>
+</header>
+
+
+<div class="row">
+{% for director in directors %}
+    <div class="col-md-4">
+      <div class="director-board text-center mb-4">
+        <img src="/{{ director.image }}" alt="" srcset="">
+        <h4 class="mt-3">{{ director.name }}</h4>
+        <h5> {{ director.depts }} </h5>
+        <h4 class="mb-4">{{ director.desig_apssdc }}</h4>
+      </div>
+    </div>
+{% endfor %} 
+    </div>
+  </div>
+
+
+{% endblock %}

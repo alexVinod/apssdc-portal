@@ -1,0 +1,130 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+#secondHeader
+{
+	background: #016d34;
+}
+.navbar-default .navbar-nav>li>a
+{
+	color: #fff;
+	height: 50px;
+}
+.navbar-default .navbar-nav>li>a:hover
+{
+	background-color: white;
+	border-bottom:3px solid orange;
+}
+.navbar.dropdown-item
+{
+    padding: 15px;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.3);
+    font-size: 12px;
+    white-space: initial !Important;
+    line-height: 15px;
+}
+
+.carousel-inner{
+  max-height: 450px !important;
+}
+.panel-primary>.panel-heading
+{
+	background-image: linear-gradient(#033e7c, #054a93);
+}
+.panel-group .panel 
+{
+	height: 300px;
+}
+div.card.card-body
+{
+	height: 145px;
+	margin-bottom: 10px;
+	background-image: url(/static/images/Productivity-Books-640x360.png);
+	color: white;
+	border-radius: 10px;
+
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.mt-5, .my-5 {
+    margin-top: 3rem!important;
+}
+.milestones .achievement-box {
+    margin: 0 0 20px;
+}
+.milestones .achievement-box:nth-child(1) .achv-icon {
+    background: #ed9a3f;
+}
+.milestones .achievement-box:nth-child(2) .achv-icon {
+    background: #51b4b8;
+}
+.milestones .achievement-box:nth-child(3) .achv-icon {
+    background: #c82f30;
+}
+.milestones .achievement-box:nth-child(4) .achv-icon {
+    background: #3f9bed;
+}
+.milestones .achievement-box:nth-child(5) .achv-icon {
+    background: #d22d43;
+}
+.milestones .achievement-box:nth-child(6) .achv-icon {
+    background: #009227;
+}
+.milestones .achv-description {
+    background: #e6e6e6;
+    border-radius: 0px 5px 5px 0px;
+    justify-content: flex-start;
+}
+.milestones .achievement-box {
+    margin: 0 0 20px;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.sub-footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+.footer .footer-links {
+    border-right: 1px solid rgba(238, 238, 238, 0.15);
+}
+.footer .sub-footer li {
+    font-size: 9px;
+    line-height: 13px;
+    color: #b7b7b7;
+}
+.event-info h3 {
+	font-size: 15px;
+}
+.event-info
+{
+	background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 1px;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 4px solid #034081;
+}
+
+.director-board img {
+    height: 100px;
+}

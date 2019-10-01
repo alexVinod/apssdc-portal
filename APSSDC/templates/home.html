@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<style>
+  .img-fluid{width: 100%;height: 251px;}
+</style>
+<div class="" style="margin-top: -20px;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="/static/Images/360.jpg" class="img-responsive img-fluid" alt="Los Angeles" >
+      </div>
+
+      <div class="item">
+        <img src="/static/Images/venkaiahNaidu.jpg" class="img-responsive img-fluid" alt="venkaiahNaidu.jpg">
+      </div>
+
+      <div class="item">
+        <img src="/static/Images/Productivity-Books-640x360.png" class="img-responsive img-fluid" alt="New York">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <hr>
+</div>
+<div>
+<div class="col-lg-9 col-md-12">
+  <div class="row">
+    <div class="col-md-6">
+    <!-- first panel -->
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">UPCOMING JOB FAIRS/SKILL CONNECT DRIVES</div>
+        <div class="panel-body">
+          <!-- marquee start -->
+          <marquee direction="up" height="220" onmouseover="this.stop();" onmouseout="this.start();">
+          {% for job in jobs %}
+          <!-- LIVE UPDATES DYNAMIC  -->
+            <div class="event-item mb-3">
+              <div class="row">
+                <div class="col-sm-3"> 
+                  <div class="event-info"> 
+                    <h3> {{ job.date | date:"d-m-Y" }} <br> <small>  {{ job.place }} </small> </h3> 
+                  </div> 
+                </div>
+                <div class="col-sm-9"><a href="{{ job.link }}">{{ job.desc }}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          <!-- LIVE UPDATES DYNAMIC  -->
+        </marquee>
+        <!-- marquee end -->
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- second panel -->
+  <div class="col-md-6">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">NEWS & UPDATES</div>
+        <div class="panel-body">
+          <!-- marquee start -->
+          <marquee direction="up" height="220" onmouseover="this.stop();" onmouseout="this.start();">
+          {% for update in updates %}
+          <!-- LIVE UPDATES DYNAMIC  -->
+            <div class="event-item mb-3">
+              <div class="row">
+                <div class="col-sm-3"> 
+                  <div class="event-info"> 
+                    <h3> {{ update.date | date:"d-m-Y" }} <br> <small>  {{ update.place }} </small> </h3> 
+                  </div> 
+                </div>
+                <div class="col-sm-9"><a href="{{ update.link }}">{{ update.desc }}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          <!-- LIVE UPDATES DYNAMIC  -->
+        </marquee>
+        <!-- marquee end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-12">
+  <div class="col-lg-12 col-md-6">
+    <div class="card text-center">
+        <div class="card card-body text-center">SKILLS</div>
+    </div>
+  </div>
+  <div class="col-lg-12 col-md-6">
+    <div class="card text-center">
+        <div class="card card-body text-center">JOBS</div>
+    </div>
+  </div>
+
+</div>
+</div> 
+
+<section class="milestones inverse" id="milestones">
+    <div class="container-fluid section-container">
+      <small> MILESTONES </small>
+      <h2>Our Achievements</h2>
+      <p>APSSDC has covered the following milestones of</p>
+      <div class="row mt-5">
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/graduation.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                {% for acheivement in acheivements %}
+                <h3 id="registerdstudents">{{ acheivement.registered }}</h3>
+                <p>Students Registered</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/worker.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                <h3 id="skilledyouth">{{ acheivement.skilledYouth }}</h3>
+                <p>Skilled Youth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/presentation.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                <h3 id="trainingproviders">{{ acheivement.tPs }}</h3>
+                <p>Training Providers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/workers.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                <h3 id="employers">{{ acheivement.employers }}</h3>
+                <p>Employers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/school.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                <h3 id="institutes">{{ acheivement.institutes }}</h3>
+                <p>No. of Institutes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 achievement-box">
+          <div class="row m-0">
+            <div class="col-md-4 p-0 achv-icon">
+              <img src="/static/images/achievements/partnership.svg" alt="">
+            </div>
+            <div class="col-md-8 p-0 achv-description vert-middle">
+              <div>
+                <h3 id="collabirations">{{ acheivement.collaborations }}</h3>
+                <p>No. of Collaborations</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-12 text-center mt-4">
+          <a class="btn btn-secondary"> View Details </a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+<!-- Registration links -->
+{% endblock %}

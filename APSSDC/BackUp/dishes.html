@@ -1,0 +1,87 @@
+{% extends 'restaurant/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<div class="row container">
+	<div class="col-sm-9">
+		<div class="row">
+			{% for dish in all_restaurant.dish_set.all %}
+			<div class="col-sm-4">
+				<div class="panel panel-primary">
+					<img src="/media/{{dish.logo}}" class="center-block img-thumbnail img-responsive" style="width: 300px; height: 200px;">
+					<div class="panel ">				
+						<h3 class="text-center text-primary" style="text-transform: capitalize;">{{dish.name}}</h3>
+					</div>
+					<div class="panel panel-body">					
+						<a class="btn btn-info btn-sm ">Price : {{dish.price}} /-</a>
+						<button type="button" class="btn btn-default btn-sm myorder pull-right" iname="{{dish.name}}" iprice="{{dish.price}}">Order</button>
+					</div>	
+				</div>
+			</div>			
+			{% endfor %}
+			
+			<script>
+				jQuery(document).ready(function(){
+					var sum=0
+					$(".pre-scrollable" ).each(function(){
+						jQuery(".myorder").click(function(){
+								var inames=jQuery(this).attr('iname');
+								var output = inames.replace(/\w+/g, function(txt) {
+  										return txt.charAt(0).toUpperCase() + txt.substr(1);
+									}).replace(/\s/g, '');
+								jQuery("#table").append("<tr rrow='{{dish.name}}'><td>"+output+" <input type='text' name='Oitems' value="+output+"></td><td class='tdCell'>"+$(this).attr('iprice')+"<input type='hidden' name='Oprice' value="+$(this).attr('iprice')+"></td><td><button class='btn btn-danger btn-xs glyphicon glyphicon-remove btnDelete' ></button></td></tr>")
+								//var col = $(this).parent().children().index($(this));
+								var cValue=Number($("#tValue").val());
+								var sum=cValue+parseInt($(this).attr('iprice'));
+								//var =sum+value;
+								$("#tValue").val(sum);
+								//alert(Number(sum));
+								//inputVal=inputVal+$(".total").val(inputVal);
+								//alert(parseInt(sum));
+								//var sum= sum+parseInt($(this).attr('iprice'));
+								//alert(parseInt(sum));
+							
+							//jQuery(".total").val(Number(sum));
+						});
+					// jQuery(".glyphicon-remove").click('',function(){
+					// 	//jQuery(this).remove($(this).attr('rrow'));
+					// 	jQuery(this).closest('tr').remove();
+					// })
+					 $("#table").on('click', '.btnDelete',function(){
+					    $(this).closest('tr').remove();				    
+					    var cValue1=Number($("#tValue").val());
+					    //alert(Number($(this).find(".tdCell").val()));
+					    //var tdValue=$(this).attr('iprice');
+					    //alert(tdValue);
+					    //var minus=cValue1-parseInt($(this).attr('iprice'));
+					    //$("#tValue").val(minus);
+					    //console.log(Number(minus));
+					    //alert(Number(minus));
+					});
+				  });
+				});
+
+			</script>				
+		</div>		
+	</div>
+	<div class="col-sm-3">
+	<form action="{% url 'restaurant:order' %}" method="post">		
+	{% csrf_token %}
+		<h3>Orders List :</h3><hr>
+		<div class="pre-scrollable" style="height: 200px;">
+			<table id="table" class="table table-bordered">
+				<tr class="bg-primary">
+					<th>ITEM</th>
+					<th colspan="2">Price</th>					
+				</tr>
+				<tr>
+					<th class="bg-info">Total</th>
+					<td colspan="3"><input type="number" id="tValue" name="tValue" class="total" readonly="readonly" style="border: none;"></td>			
+				</tr>
+			</table>
+
+		</div>
+		<input type="submit" value="submit" class="btn btn-primary btn-sm">			
+	</div>
+	</form>
+</div>
+{% endblock %}
