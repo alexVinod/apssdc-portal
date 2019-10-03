@@ -1,6 +1,194 @@
+/** {
+    font-family: 'Montserrat', sans-serif;
+}*/
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-agency {
+    font-size: 18px;
+    font-family: agency fb;
+}
+
+.p-3 {
+    padding: 30px;
+}
+
+.m-3{
+    margin: 2px;
+}
+
+.mml-2{
+    margin-left: -2px;
+}
+
+.gmap-cus {
+    width: 100%;
+}
+
+.row .ccard {
+    background-color: #FFF;
+}
+
+.row .ccard:hover {
+    background-color: honeydew;
+    border-radius: 8px;
+}
+
+
+.cbtn {
+    padding: 8px;
+    background:transparent;
+    /*border: transparent 0px #FFF;*/
+    border-radius: 3px;
+    margin: 10px;
+    border-width: 0px;
+    /*transition: border-width 0.6s linear;*/
+    border: solid 0px #FFF;
+    transition: border-width 0.2s;
+}
+.cbtn:hover { border-width: 2px; }
+
+.cbtn-primary {
+    box-shadow: 0px 0px 3px #337ab7;   
+    background-color: #337ab7;
+    color: #FFF;
+}
+
+.text-blue {
+    color: #00aaff;
+}
+.text-white {
+    color: #FFF;
+}
+
+
+
+
+.text-vcenter {
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.text-20 {
+    font-size: 28px;
+}
+
+.text-bloder {
+    font-weight: bolder;
+}
+
+.table-overme {box-shadow: 0px 0px 0px #ccc;}
+.table-overme:hover {color:chocolate;box-shadow: -5px 0px 10px #212121;cursor: pointer;}
+
+.uline:after {
+    content: '';
+    width: 54px;
+    height: 3px;
+    background: #337ab7;
+    position: absolute;
+    bottom: 100;
+    left: 0;
+    margin:40px 0px 0px 30px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+    border-bottom: 0px;
+}
+
+.contact:before {
+    content:'CONTACT DETAILS';
+    font-size: 9px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 0px;
+    color: gray;
+}
+
+.address:before {
+    content:'REGISTERED ADDRESS';
+    font-size: 9px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 0px;
+    color: gray;
+}
+
+.connectWithAPSSDC:before {
+    content:'CONNECT WITH APSSDC';
+    font-size: 9px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 0px;
+    color: gray;
+}
+
+
+/*.sub-header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}*/
+
+.img-contact{
+    background-image:url("/static/Images/contact-email-fashion-4970.jpg");
+    background-size:cover !important;
+    position: relative;
+    background-position: center !important;
+    width:100%;
+    height:250px;
+    background-attachment:fixed;
+    background-blend-mode: color-burn;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.img-careers{
+    background-image:url("/static/Images/samples/abc-accomplished-alphabet-48898.jpg");
+    padding: 20px;
+    background-size: cover !important;
+    text-align: center;
+    min-height: 190px;
+    position: relative;
+    background-position: center !important
+}
+
+.img-careers h4 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/*.sub-header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}*/
+
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
 
 table {
 	font-size: 1em;
@@ -128,3 +316,7 @@ img {
 .director-board img {
     height: 100px;
 }
+
+/**, ::after, ::before {
+    box-sizing: border-box;
+}*/
