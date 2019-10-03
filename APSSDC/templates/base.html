@@ -44,18 +44,18 @@ Contact -->
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
 		        <li><a href="{% url 'lbook:home' %}">Home</a></li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown show">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" href="{% url 'lbook:about' %}" 
-          aria-haspopup="true" aria-expanded="false">About Us</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'lbook:about' %}">Vision & Mission</a><br>
-          <a class="dropdown-item" href="{% url 'lbook:board' %}">Board of Directors</a>
-          <a class="dropdown-item" href="#">Milestones and Achievements</a>
-          <a class="dropdown-item" href="#">FAQs</a>
-          <a class="dropdown-item" href="#">How we Work</a>
-        </div>
-      </li>
+      			<!-- Dropdown -->
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="{% url 'lbook:about' %}">Vision & Mission</a></li>
+				  <li><a class="dropdown-item" href="{% url 'lbook:board' %}">Board of Directors</a></li>
+				  <li><a class="dropdown-item" href="#">Milestones and Achievements</a></li>
+				  <li><a class="dropdown-item" href="#">FAQs</a></li>
+				  <li><a class="dropdown-item" href="#">How we Work</a></li>
+				</ul>
+			</li>
 
 		        <li><a href="{% url 'lbook:dashboard' %}">DashBoard</a></li>
 		        <li><a href="{% url 'lbook:skillstories' %}">Skill Stories</a></li>
