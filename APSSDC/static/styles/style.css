@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 html,body {
     overflow-x: hidden;
 }
+=======
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 /** {
     font-family: 'Montserrat', sans-serif;
 }*/
@@ -26,6 +29,7 @@ body {
     margin-left: -2px;
 }
 
+<<<<<<< HEAD
 .m-t-2 {
     margin-top: 10px;
 }
@@ -34,6 +38,8 @@ body {
     margin-bottom: 10px;
 }
 
+=======
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 .gmap-cus {
     width: 100%;
 }
@@ -46,6 +52,7 @@ body {
     background-color: honeydew;
     border-radius: 8px;
 }
+<<<<<<< HEAD
 /*.img-banner{}*/
 .corner-svg {
     background-image:url("/static/images/samples/corner.svg");
@@ -54,6 +61,9 @@ body {
     height:auto;
     background-attachment:fixed;    
 }
+=======
+
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 
 .cbtn {
     padding: 8px;
@@ -81,6 +91,7 @@ body {
     color: #FFF;
 }
 
+<<<<<<< HEAD
 .text-black {
     color: #212121;
 }
@@ -98,6 +109,10 @@ body {
     padding: 10px;
 }
 .w-100 {width:100%; }
+=======
+
+
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 
 .text-vcenter {
     vertical-align: middle;
@@ -132,6 +147,7 @@ body {
     border-bottom: 0px;
 }
 
+<<<<<<< HEAD
 .ualine:after {
     content: '';
     width: 54px;
@@ -156,6 +172,8 @@ body {
     text-shadow: 0px 0px 0px honeydew;
 }
 
+=======
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 .contact:before {
     content:'CONTACT DETAILS';
     font-size: 9px;
@@ -194,6 +212,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }*/
 
+<<<<<<< HEAD
 .img-gallery{
     background-image:url("/static/Images/contact-email-fashion-4970.jpg");
     padding: 20px;
@@ -205,6 +224,8 @@ body {
 }
 
 
+=======
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 .img-contact{
     background-image:url("/static/Images/contact-email-fashion-4970.jpg");
     background-size:cover !important;
@@ -387,6 +408,7 @@ img {
     height: 100px;
 }
 
+<<<<<<< HEAD
 footer {
     color: rgb(255, 255, 255);
     text-align: center;
@@ -427,3 +449,8 @@ footer .footer-links {
 /**, ::after, ::before {
     box-sizing: border-box;
 }*/
+=======
+/**, ::after, ::before {
+    box-sizing: border-box;
+}*/
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8

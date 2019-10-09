@@ -49,6 +49,7 @@ Contact -->
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
 		        <li><a href="{% url 'lbook:home' %}">Home</a></li>
+<<<<<<< HEAD
 			      <!-- Dropdown -->
 			    <li class="dropdown">
 			        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
@@ -61,6 +62,20 @@ Contact -->
 			          <li><a class="dropdown-item" href="#">How we Work</a></li>
 			        </ul>
 			      </li>
+=======
+      			<!-- Dropdown -->
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="{% url 'lbook:about' %}">Vision & Mission</a></li>
+				  <li><a class="dropdown-item" href="{% url 'lbook:board' %}">Board of Directors</a></li>
+				  <li><a class="dropdown-item" href="#">Milestones and Achievements</a></li>
+				  <li><a class="dropdown-item" href="#">FAQs</a></li>
+				  <li><a class="dropdown-item" href="#">How we Work</a></li>
+				</ul>
+			</li>
+>>>>>>> 554a5869dddc613d7eed64cea66659ab2d5a27e8
 
 			        <li><a href="{% url 'lbook:dashboard' %}">DashBoard</a></li>
 			        <li><a href="{% url 'lbook:skillstories' %}">Skill Stories</a></li>
