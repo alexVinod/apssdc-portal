@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate,login as dj_login,logout as dj_logo
 
 from django.core.mail import send_mail
 
-from .models import Job,Update,Acheivement,Director
+from .models import Job,Update,Acheivement,Director, DistrictOfficer, Gallery
 # Create your views here.
 
 def home(request):
@@ -29,3 +29,14 @@ def boardDirectors(request):
 
 def comingSoon(request):
 	return render(request,"comingSoon.html")
+
+def careers(request):
+	return render(request,"careers.html")
+
+def gallery(request):
+	gallerys = Gallery.objects.all()
+	return render(request,"gallery.html",{'gallerys':gallerys})	
+
+def contact(request):
+	officers = DistrictOfficer.objects.all()
+	return render(request,"contract.html",{'officers':officers})

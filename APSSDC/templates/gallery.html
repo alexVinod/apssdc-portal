@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div>
+	<div class="corner-svg">
+		<div class="sub-header img-gallery"><br><br>
+			<h4 class="text-white text-vcenter text-center">Gallery</h4>
+		</div>
+		<div class="container">
+			<h2 class="gallery text-black">Gallery</h2>
+			<ul class="gallery row col-sm-12">
+				{% for gallery in gallerys %}
+					{% if gallery.hide_show == 'show' %}
+					    <li class="col-xs-6 col-sm-4 col-md-3 m-t-2 m-b-2">
+					      <a href="/{{ gallery.image.url }}" data-caption="{{ gallery.eventName }}">
+					        <img src="/{{ gallery.image.url }}" alt="{{ gallery.eventName }}" class="img-thumbnail" style="width: 200px; height: 200px;">
+					      </a>
+					    </li>
+				    {% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- <script>
+	$.ajax({
+	  url: "/static/images/gallery",
+	  success: function(data){
+	     $(data).find("*.jpg").each(function(){
+	        // will loop through 
+	        alert("Found a file: " + $(this).attr("href"));
+	     });
+	  }
+		});
+    	// $.get('/static/images/gallery/',function(data){
+    	// 	$('.gallery').append(data);
+    	// })
+		// var filenames=[], foldernames=[];
+
+		// $.get("/static/images/gallery/",function(response){
+		//     document.write(response);
+		//     getNames();
+		// });
+
+		// function getNames()
+		// {
+		// 	console.log(filenames)
+		//     var files = document.querySelectorAll("a.icon.file");
+		//     var folders = document.querySelectorAll("a.icon.dir");
+		//     files.forEach(function(item){filenames.push(item.textContent)})
+		//     folders.forEach(function(item){foldernames.push(item.textContent.slice(0,-1))})
+		//     console.log(filenames);
+		//     console.log(foldernames);
+		// }
+</script> -->
+		<!-- <div class="container-fluid">
+		  <ul class="gallery row col-sm-12">		  	
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image1.jpg" data-caption="Fitness Photo Caption">
+		        <img src="/static/images/test/image1.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image10.jpg" data-caption="Girl Photo Caption">
+		        <img src="/static/images/test/image10.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image11.jpg" data-caption="Bikini Photo Caption">
+		        <img src="/static/images/test/image12.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image2.jpg" data-caption="Yoga Photo Caption">
+		        <img src="/static/images/test/image2.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		  </ul>
+		  <ul class="gallery row col-sm-12">
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image1.jpg" data-caption="Fitness Photo Caption">
+		        <img src="/static/images/test/image1.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image10.jpg" data-caption="Girl Photo Caption">
+		        <img src="/static/images/test/image10.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image11.jpg" data-caption="Bikini Photo Caption">
+		        <img src="/static/images/test/image12.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image2.jpg" data-caption="Yoga Photo Caption">
+		        <img src="/static/images/test/image2.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		  </ul>
+		  <ul class="gallery row col-sm-12">
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image1.jpg" data-caption="Fitness Photo Caption">
+		        <img src="/static/images/test/image1.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image10.jpg" data-caption="Girl Photo Caption">
+		        <img src="/static/images/test/image10.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image11.jpg" data-caption="Bikini Photo Caption">
+		        <img src="/static/images/test/image12.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		    <li class="col-sm-3">
+		      <a href="/static/images/test/image2.jpg" data-caption="Yoga Photo Caption">
+		        <img src="/static/images/test/image2.jpg" alt="Image" class="img-thumbnail" style="width: 200px; height: 200px;">
+		      </a>
+		    </li>
+		  </ul>
+		</div> -->
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

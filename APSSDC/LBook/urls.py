@@ -24,7 +24,8 @@ urlpatterns=[
 	path("tenders",views.comingSoon,name="tenders"),
 	path("jobs",views.comingSoon,name="jobs"),
 	path("sdc",views.comingSoon,name="sdc"),
-	path("careers",views.comingSoon,name="careers"),
+	path("careers",views.careers,name="careers"),
 	path("media",views.comingSoon,name="media"),
-	path("contact",views.comingSoon,name="contact"),
+	path("gallery",views.gallery,name="gallery"),
+	path("contact",views.contact,name="contact"),
 ]

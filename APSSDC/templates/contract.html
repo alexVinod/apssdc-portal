@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="img-contact"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 p-3 ccard ">
+			<form>
+				<h3 class="uline contact ">Contact Us</h3><br>
+				<div class="form-group row">
+					<div class="row">
+						<div class="col-sm-6">
+							<label>Name :<span class="text-danger">*</span></label>
+							<input type="text" name="name" class="form-control input-sm" placeholder="Enter Name" required="required">						
+						</div>
+						<div class="col-sm-6">
+							<label>Email :<span class="text-danger">*</span></label>
+							<input type="text" name="email" class="form-control input-sm" placeholder="Enter Email" required="required">
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label>Phone Number :<span class="text-danger">*</span></label>
+					<input type="text" name="phone" class="form-control input-sm" placeholder="Enter Phone Number" required="required">
+				</div>
+				<div class="form-group row">
+					<label>Enter Description :<span class="text-danger">*</span></label>
+					<textarea class="form-control input-sm" placeholder="Enter Description" required="required"></textarea>
+				</div>
+				<div class="form-group row">
+					<input type="submit" value="Submit" class="btn btn-primary btn-sm">
+				</div>
+			</form>
+		</div>
+		<div class="col-md-4 p-3 ccard ">
+			<h3 class="uline address">Address</h3><br>
+			<p class="font-agency"># 3rd floor,Infosight Building, survey No. 78/2,Near Pathuru Road Junction,NH-16 Service Road, Tadepalli - 522501,Guntur District,Andhra Pradesh</p>
+
+			<h3 class="uline">Toll-free number</h3>
+			<h3 class="text-blue text-bloder" >1800 4252 422</h3>
+		</div>
+		<div class="col-md-4 p-3 ccard">
+			<h3 class="uline connectWithAPSSDC">Contact Details</h3><br>
+			<div class="row">
+				<div class="col-md-6">
+					<img src="/static/images/dummy-img.png" class="img-responsive" width="100px" height="100px" >
+				</div>
+				<div class="col-md-6">
+					<a href="#" class="text-info"><i class="glyphicon glyphicon-envelope text-info"></i> ceo@apssdc.in</a>
+				</div>
+				<div class="col-md-12">
+					<br><br>
+					<button class="cbtn cbtn-primary" data-toggle="modal" data-target="#dsdo">
+						District Skill Development Officers
+					</button>
+				</div>				
+			</div>
+		</div>
+	</div>	
+	<div class="modal fade" id="dsdo" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="pull-right btn btn-danger btn-xs" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title text-blue font-agency text-20 text-bloder">District Officers List :</h4>
+	        </div>
+	        <div class="modal-body">
+	        	<div class="table-responsive">
+		          <table class="table table-bordered table-striped table-hover">
+			          	<thead class="">
+			          		<tr class="bg-primary">
+			          			<th>S.No</th>
+			          			<th>District</th>
+			          			<th>Name</th>
+			          			<th>Contact</th>
+			          			<th>Email</th>	          			
+			          		</tr>
+			          	</thead>
+		          		<tbody>
+		          			{% for officer in officers %}
+			          		<tr class="table-overme">
+			          			<td>{{ forloop.counter }}</td>
+			          			<td>{{ officer.district|title }}</td>
+			          			<td>{{ officer.name }}</td>
+			          			<td>{{ officer.contact }}</td>
+			          			<td>{{ officer.email }}</td>
+			          		</tr>
+			          		{% endfor %}	
+		          		</tbody>
+		          </table>	        		
+	        	</div>
+	        </div>
+	        <div class="modal-footer">
+	        	<button class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	</div>
+	<br>
+	<div class="gmap_canvas img-responsive">
+		<iframe class="gmap-cus" height="600" id="gmap_canvas"
+			src="https://maps.google.com/maps?q=Tadapalli%2CApssdc&t=&z=13&ie=UTF8&iwloc=&output=embed"
+			frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+		</iframe>
+	</div>
+</div><br>
+{% endblock content  %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <a href="https://www.enable-javascript.net">enable-javascript.net</a> -->
+<!-- <div class="container" id="map" style="height: 500px;"></div> -->
+<!-- <script>
+	  var map;
+	  var marker;
+	  var uluru={lat: 16.474801, lng: 80.616353};
+	  function initMap() {
+	    map = new google.maps.Map(document.getElementById('map'), {
+	      center: uluru, zoom: 12
+	    });
+	    var contentString = `
+	    	<div jstcache="117" class="place-card place-card-large m-3">
+	    	  <div class="place-desc-large"> 
+	    	  	<div jstcache="36" class="place-name" jsan="7.place-name">AP State Skill Development</div> 
+	    	  	<div jstcache="37" class="address" jsan="7.address">3rd floor, G&amp;J Infra Building, Tadepalli, Andhra Pradesh 522501</div> </div> <div jstcache="38" class="navigate"> <div jsaction="placeCard.directions" class="navigate"> <a target="_blank" jstcache="52" href="https://maps.google.com/maps?ll=16.474792,80.612998&amp;z=14&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=embed&amp;daddr=AP%20State%20Skill%20Development%203rd%20floor%2C%20G%26J%20Infra%20Building%20Tadepalli%2C%20Andhra%20Pradesh%20522501@16.4711297,80.6154437" class="navigate-link"> <div class="icon navigate-icon"></div> <div jstcache="53" class="navigate-text">Directions</div> </a> </div> <div class="tooltip-anchor"> <div class="tooltip-tip-outer"></div> <div class="tooltip-tip-inner"></div> <div class="tooltip-content"> <div jstcache="54">Get directions to this location on Google Maps.</div> </div> </div> </div> <div jstcache="39" class="navigate-separator" style="display:none"> </div> <div jstcache="40" class="star-entity" style="display:none"></div> <div jstcache="41" class="review-box"> <div jstcache="42" class="review-number" jsan="7.review-number">3.3</div> <div jstcache="43" jsinstance="0" class="icon rating-star rating-full-star" jsan="7.icon,7.rating-star,7.rating-full-star"></div><div jstcache="43" jsinstance="1" class="icon rating-star rating-full-star" jsan="7.icon,7.rating-star,7.rating-full-star"></div><div jstcache="43" jsinstance="2" class="icon rating-star rating-full-star" jsan="7.icon,7.rating-star,7.rating-full-star"></div><div jstcache="43" jsinstance="3" class="icon rating-star rating-half-star" jsan="7.icon,7.rating-star,7.rating-half-star"></div><div jstcache="43" jsinstance="*4" class="icon rating-star rating-empty-star" jsan="7.icon,7.rating-star,7.rating-empty-star"></div> <a target="_blank" jstcache="44" href="http://www.google.com/search?q=AP+State+Skill+Development,+3rd+floor,+G%26J+Infra+Building,+Tadepalli,+Andhra+Pradesh+522501&amp;ludocid=15032476147319859361#lrd=0x3a35f066ad37a06f:0xd09e1569178868a1,1" jsaction="mouseup:placeCard.reviews" class="review-box-link" jsan="7.review-box-link,8.href,0.target,22.jsaction">4 reviews</a> </div> <div jstcache="45" class="saved-from-source-link" style="display:none"></div> <div class="bottom-actions"> <div class="google-maps-link"> <a target="_blank" jstcache="46" href="https://maps.google.com/maps?ll=16.474792,80.612998&amp;z=14&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=embed&amp;cid=15032476147319859361" jsaction="mouseup:placeCard.largerMap">View larger map</a> </div> </div> </div>`
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+	    marker = new google.maps.Marker({
+	    	position: uluru,
+	    	map: map,
+	    	draggable: true,
+	    	animation: google.maps.Animation.DROP,
+	    });
+	    marker.addListener('click', toggleBounce);
+	    infowindow.open(map, marker);
+	  }
+	  function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+	</script> -->

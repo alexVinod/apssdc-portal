@@ -44,4 +44,31 @@ class Director(models.Model):
 	def __str__(self):
 		return self.name
 	
+class DistrictOfficer(models.Model):
+	district_choices = (('srikakulam','Srikakulam'),
+				 ('vizinagaram','Vizinagaram'),
+				 ('visakapatnam','Visakapatnam'),
+				 ('eastGodavari','East Godavari'),
+				 ('krishna','Krishna'),
+				 ('westGodavari','West Godavari'),
+				 ('guntur','Guntur'),('prakasam','Prakasam'),
+				 ('nellore','Nellore'),
+				 ('chittoor','Chittoor'),('kadapa','Kadapa'),
+				 ('ananthapur','Ananthapur'),('kurnool','Kurnool'))
+	district=models.CharField(max_length=300,choices=district_choices)
+	name=models.CharField(max_length=600)
+	contact = models.CharField(max_length=20)
+	email = models.CharField(max_length=100)
 
+	def __str__(self):
+		return self.district+" -- "+self.name
+
+class Gallery(models.Model):
+	hideShow_choices = (('hide','Hide'),('show','Show'))
+
+	eventName = models.CharField(max_length=600)
+	image = models.ImageField(upload_to='static/images/gallery/')
+	description = models.CharField(max_length=1000)
+	hide_show = models.CharField(max_length=50,choices=hideShow_choices)
+	def __str__(self):
+		return self.eventName+" -- "+self.image.url+" -- "+self.hide_show

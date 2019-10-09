@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>APSSDC</title>
+	<title>Andhra pradesh state skill development corporation (APSSDC)</title>
 	{% load staticfiles %}
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">	
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+    <link rel="icon" type="text/css" href="{% static 'images/footer/apssdc.png' %}">
+    <link rel="stylesheet" href="{% static 'awesome/font-awesome.min.css' %}">
 
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
 	<link rel="stylesheet" href="/static/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/jquery.lightbox.min.css' %}">
+  	<link rel="stylesheet" href="{% static 'styles/lightBox-demo.css' %}">
 	<link rel="stylesheet" href="/static/styles/style.css">
+		
 	<script src="{% static 'scripts/jquery-3.3.1.min.js' %}"></script>
-	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-	
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 </head>
 <body>
 	<img src="{% static 'images/image.png' %}" class="img-responsive center-block" style="height:100px,width:200px" >
 	<div id="navbar">
 		<nav class="navbar navbar-default">
-		  <div class="container-fluid" id="secondHeader">
+		  <div class="container-fluid" id="secondHeader" >
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span> 
 		      </button>
-    </div>
+    		</div>
 		   <!-- Home
 About Us 
 DashBoard 
@@ -44,49 +49,110 @@ Contact -->
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
 		        <li><a href="{% url 'lbook:home' %}">Home</a></li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown show">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" href="{% url 'lbook:about' %}" 
-          aria-haspopup="true" aria-expanded="false">About Us</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'lbook:about' %}">Vision & Mission</a><br>
-          <a class="dropdown-item" href="{% url 'lbook:board' %}">Board of Directors</a>
-          <a class="dropdown-item" href="#">Milestones and Achievements</a>
-          <a class="dropdown-item" href="#">FAQs</a>
-          <a class="dropdown-item" href="#">How we Work</a>
-        </div>
-      </li>
+			      <!-- Dropdown -->
+			    <li class="dropdown">
+			        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+			        <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a class="dropdown-item" href="{% url 'lbook:about' %}">Vision & Mission</a></li>
+			          <li><a class="dropdown-item" href="{% url 'lbook:board' %}">Board of Directors</a></li>
+			          <li><a class="dropdown-item" href="#">Milestones and Achievements</a></li>
+			          <li><a class="dropdown-item" href="#">FAQs</a></li>
+			          <li><a class="dropdown-item" href="#">How we Work</a></li>
+			        </ul>
+			      </li>
 
-		        <li><a href="{% url 'lbook:dashboard' %}">DashBoard</a></li>
-		        <li><a href="{% url 'lbook:skillstories' %}">Skill Stories</a></li>
-		        <li><a href="{% url 'lbook:institues' %}">Institute Finder</a></li>
-		        <li><a href="{% url 'lbook:tenders' %}">Tenders</a></li>
-		        <li><a href="{% url 'lbook:jobs' %}">Jobs</a></li>
-		        <li><a href="{% url 'lbook:sdc' %}">Skill Development</a></li>
-		        <li><a href="{% url 'lbook:careers' %}">Careers</a></li>
-		        <li><a href="{% url 'lbook:media' %}">Media</a></li>
-		        <li><a href="{% url 'lbook:contact' %}">Contact</a></li>
-		      </ul>
+			        <li><a href="{% url 'lbook:dashboard' %}">DashBoard</a></li>
+			        <li><a href="{% url 'lbook:skillstories' %}">Skill Stories</a></li>
+			        <li><a href="{% url 'lbook:institues' %}">Institute Finder</a></li>
+			        <li><a href="{% url 'lbook:tenders' %}">Tenders</a></li>
+			        <li><a href="{% url 'lbook:jobs' %}">Jobs</a></li>
+			        <li><a href="{% url 'lbook:sdc' %}">Skill Development</a></li>
+			        <li><a href="{% url 'lbook:careers' %}">Careers</a></li>			     
+			        <li class="dropdown">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="{% url 'lbook:gallery' %}">Gallery</a></li>
+				          <li><a href="#">Page 1-2</a></li>
+				        </ul>
+				      </li>
+			        <li><a href="{% url 'lbook:contact' %}">Contact</a></li>
+				</ul>
 		  </div>
 		  </div>
 		</nav>
 	</div>
-	<div class="container-fluid">
+	<div class="">
 	    
 		{% block content %}
 		<img src="{% static 'images/lib.jpg' %}" class="center-block" style="height:1000px,width:500px" >
 		{% endblock %}
 <!-- FOOTER -->
-<footer>
-    <div class="container-fluid" style="background-color: black;">
-      <div class="row text-center">
-        <div class="col-md-12 p-3">
-          <a href=""> APSSDC | All rights reserved | Copyright ©
-            2019 </a>
-        </div>
-      </div>
+<footer class="bg-black">
+    <div class="container-fluid sub-footer">
+		<div class="row text-left">
+			<div class="col-md-2 vert-middle horiz-left">
+				<div class="footer-logo-wrapper">
+					<img src="/static/images/footer/apssdc.png" alt="sdc" width="100px;" style="margin:5px;">
+				</div>
+			</div>
+
+			<div class="col-md-2 footer-links">
+				<ul class="list-unstyled mb-0">
+					<li><h4>Quick Links</h4></li>
+					<li><a href="#">Vision and Mission </a></li>
+					<li><a href="#">Careers </a></li>
+					<li><a href="#">FAQs </a></li>
+					<li><a href="#">Tenders </a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 footer-links">
+				<ul class="list-unstyled mb-0">
+					<li><h4>Media</h4></li>
+					<li><a href="/home/gallery">Gallery </a></li>
+					<li><a href="/home/videos">Videos </a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 footer-links">
+				<ul class="list-unstyled mb-0">
+					<li><h4>Resources</h4></li>					
+					<li><a href="#">User Manual</a></li>
+					<li><a href="/home/career">Careers</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2 footer-links">
+				<ul class="list-unstyled mb-0">
+					<li><h4>Partners</h4></li>
+					<li><a href="/home/institutefinder">Find a Training Center</a></li>
+					<li><a href="/home/TPfinder">Find a Training Partner</a></li>		
+					<li><a href="/home/Esccolleges">Find a ESC College</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<ul class="list-unstyled mb-0">
+					<li><h4>Contact Us</h4></li>
+					<li class="mb-2">
+						#3rd floor,Infosight Building, <br>
+						survey No. 78/2,Near Pathuru Road Junction, <br> NH-16
+						Service Road, Tadepalli - 522501, <br> Guntur
+						District,Andhra Pradesh
+					</li>
+					<li><a href="tel:1800-425-2422"> 1800-425-2422 </a></li>
+				</ul>
+			</div>    	
+		</div>
     </div>
+	<div class="col-md-12 p-2 bg-black w-100  ">			
+		<a href="" class="text-center text-white"> APSSDC | All rights reserved | Copyright © 2019 </a>
+	</div>
+
   </footer>
 	</div>
+	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'scripts/jquery.lightbox.min.js' %}"></script>	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>$(function() {$('.gallery a').lightbox();});
+</script>
 </body>
 </html>
